@@ -56,6 +56,8 @@ public class VersionAccessPlugin implements Plugin<Project>
 
 		if (project.getPlugins().hasPlugin(EclipsePlugin.class)) {
 			project.getTasks().findByName("eclipse").dependsOn(task);
+			project.getTasks().findByName("eclipseClasspath").dependsOn(task);
+			project.getTasks().findByName("eclipseProject").dependsOn(task);
 		}
 
 		Path pathBuildDir = project.getBuildDir().toPath();
