@@ -19,7 +19,7 @@ In your `build.gradle` file, add this:
             maven { url 'http://mvn.topobyte.de' }
         }
         dependencies {
-            classpath 'de.topobyte:gradle-version-access-plugin:0.0.2'
+            classpath 'de.topobyte:gradle-version-access-plugin:0.1.0'
         }
     }
 
