@@ -19,12 +19,14 @@ package de.topobyte.gradle;
 
 import org.gradle.api.internal.ConventionTask;
 import org.gradle.api.logging.Logger;
+import org.gradle.api.tasks.Nested;
 
 public abstract class AbstractVersionAccessTask extends ConventionTask
 {
 
 	protected final Logger logger = getLogger();
 
+	@Nested
 	protected VersionAccessPluginExtension configuration;
 
 	public VersionAccessPluginExtension getConfiguration()

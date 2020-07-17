@@ -17,10 +17,16 @@
 
 package de.topobyte.gradle;
 
+import org.gradle.api.tasks.Input;
+import org.gradle.api.tasks.Optional;
+
 public class VersionAccessPluginExtension
 {
 
+	@Input
 	private String packageName;
+	@Input
+	@Optional
 	private String className;
 
 	public String getPackageName()
