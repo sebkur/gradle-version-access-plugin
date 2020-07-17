@@ -2,7 +2,7 @@ dependencies {
     testImplementation 'junit:junit:4.13'
 }
 
-eclipse.project.name = 'version-access-gradle-plugin-test1'
+eclipse.project.name = 'version-access-gradle-plugin-test2'
 
 generateVersionAccessSource {
     packageName = "com.example.test"
