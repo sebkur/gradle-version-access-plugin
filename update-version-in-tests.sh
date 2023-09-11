@@ -8,7 +8,11 @@ fi
 OLD="$1"
 NEW="$2"
 
-OLDFULL="de.topobyte:gradle-version-access-plugin:$OLD"
-NEWFULL="de.topobyte:gradle-version-access-plugin:$NEW"
+OLDFULL1="de.topobyte:gradle-version-access-plugin:$OLD"
+NEWFULL1="de.topobyte:gradle-version-access-plugin:$NEW"
 
-find test test-local/ -name build.gradle | xargs sed -i -e "s/$OLD/$NEW/"
+OLDFULL2="'de.topobyte.version-access-gradle-plugin' version '$OLD'"
+NEWFULL2="'de.topobyte.version-access-gradle-plugin' version '$NEW'"
+
+find test test-local/ -name build.gradle | xargs sed -i -e "s/$OLDFULL1/$NEWFULL1/"
+find test test-local/ -name build.gradle | xargs sed -i -e "s/$OLDFULL2/$NEWFULL2/"
